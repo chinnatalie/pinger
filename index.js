@@ -1,5 +1,9 @@
-const schedule = require('node-schedule');
+const request = require('request');
 
-const ping = schedule.scheduleJob('30 * * * *', function () {
-    console.log('The answer to life, the universe, and everything!');
-});
+const serverUrl = 'HEROKU URL HERE';
+
+setInterval(() => {
+    request.get({
+        url: serverUrl
+    }, () => console.log('PINGED ' + serverUrl));
+}, 30 * 60 * 1000);
