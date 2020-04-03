@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/chinnatalie/pinger#readme",
   "dependencies": {
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "jest": "^25.2.7"
   }
 }
