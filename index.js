@@ -1,4 +1,9 @@
 const {ping} = require('./src/ping');
-const serverUrl = 'HEROKU URL HERE';
+const fs = require('fs');
 
-ping(serverUrl);
+try {
+    const serverUrl = fs.readFileSync('./input.txt', 'utf8');
+    ping(serverUrl);
+} catch (err) {
+    console.error('input.txt not found');
+}
