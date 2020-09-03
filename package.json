@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/chinnatalie/pinger#readme",
   "dependencies": {
+    "moment": "^2.27.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
